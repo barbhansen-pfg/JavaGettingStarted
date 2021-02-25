@@ -24,7 +24,6 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     public void numberOfWholeSlicesFromOnePizzaAndEightPeople() {
         int numberOfPeople = 4;
         int numberOfEightSlicePizzas = 2;
@@ -35,8 +34,7 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
-    // TODO RESPONSE: What operator is used to determine remainders?
+    // TODO RESPONSE: What operator is used to determine remainders? %
     public void leftoversWithFivePeopleAndTwoPizzas() {
         int numberOfPeople = 5;
         int numberOfEightSlicePizzas = 2;
@@ -54,7 +52,9 @@ public class WeekOneExercisesPartOne {
     }
 
     private int determineLeftoverSlicesOfPizza(int numberOfPizzas, int numberOfPeople) {
-        return 0;
+        final int slicesInEightSlicePizza = 8;
+        int leftoverSlicesPizza= (slicesInEightSlicePizza * numberOfPizzas) % numberOfPeople;
+        return leftoverSlicesPizza;
     }
 
     @Test

@@ -10,7 +10,6 @@ public class WeekOneExercisesPartTwo {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAMale() {
         char gender = 'M';
         int weightInPounds = 185;
@@ -23,7 +22,6 @@ public class WeekOneExercisesPartTwo {
     }
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAFemale() {
         char gender = 'F';
         int weightInPounds = 135;
@@ -58,6 +56,16 @@ public class WeekOneExercisesPartTwo {
     private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
-        return 0.0f;
+        double alcoholDistributionRatio = 0.00d;
+        if(gender == 'F') {
+            alcoholDistributionRatio = 0.66;
+        }
+        else if (gender == 'M') {
+            alcoholDistributionRatio = 0.73;
+        }
+
+        double calculatedBAC = ((5.14 / weightInPounds) * ouncesOfAlcoholConsumed * alcoholDistributionRatio) - (hoursSinceLastDrink * .015);
+        float actualBAC = (float) calculatedBAC;
+        return actualBAC;
     }
 }

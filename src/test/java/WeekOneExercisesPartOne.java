@@ -58,7 +58,6 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     // TODO RESPONSE: In the variable declarations below, why is it necessary to place
     //  an 'f' after 4.3 but not after 1500 or 4?
     public void simpleInterestReturnsCorrectAmount() {
@@ -82,6 +81,8 @@ public class WeekOneExercisesPartOne {
      * @return
      */
     private float calcSimpleInterest(float principal, float percentInterestRate, float numberOfYears) {
-        return 0;
+        float actualInvestmentValue = principal * (1 + ((percentInterestRate/100) * numberOfYears));
+        System.out.println(actualInvestmentValue);
+        return actualInvestmentValue;
     }
 }

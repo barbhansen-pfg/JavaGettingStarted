@@ -31,11 +31,11 @@ public class WeekTwoExercisePartOne {
     // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
 
-    // TODO Response: Why would you never refactor if you had a failing test?
+    // TODO Response: Why would you never refactor if you had a failing test?  You need it to be clean to limit what you are looking into
+
 
     @Test
-    @Disabled
-    // TODO Response: Why did we start with this test?
+    // TODO Response: Simplest
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);
 
@@ -45,8 +45,7 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
-    // TODO Response:  If the above test works with open frames, why is this test necessary?
+    // TODO Response:  to ensure the addition is working correctly
     public void whenRollingOpenFrameScoreIsSumOfRolls() {
         rollMany(20, 1);
 
@@ -65,7 +64,6 @@ public class WeekTwoExercisePartOne {
         rollMany(17, 0);
 
         int actual = bowlingGame.score();
-
         assertEquals(16, actual);
     }
 

@@ -1,5 +1,7 @@
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -32,7 +34,6 @@ public class WeekTwoExercisePartThree {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     public void sendingAnActualFridayTheThirteenthReturnsTrue() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -107,6 +108,11 @@ public class WeekTwoExercisePartThree {
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
-        return false;
+        String dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek().name();
+        System.out.println(dayOfWeek);
+        if(dayOfWeek.equals("FRIDAY"))
+            return true;
+        else
+            return false;
     }
 }

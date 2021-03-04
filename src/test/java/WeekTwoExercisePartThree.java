@@ -1,7 +1,9 @@
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -35,15 +37,12 @@ public class WeekTwoExercisePartThree {
 
     @Test
     public void sendingAnActualFridayTheThirteenthReturnsTrue() {
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
         boolean actual = isUnluckyDate(2019, 9, 13);
 
         assertTrue(actual);
     }
 
     @Test
-    @Disabled
     public void sendingNotAFridayTheThirteenthDateReturnsFalse() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -53,17 +52,13 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
     public void sendingFridayTheThirteenthFromAnotherYearReturnsFalse() {
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
         boolean actual = isUnluckyDate(2020, 11, 13);
 
         assertTrue(actual);
     }
 
     @Test
-    @Disabled
     public void sendingTwentySixteenReturnsOnlyOneFridayTheThirteenth() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -103,13 +98,98 @@ public class WeekTwoExercisePartThree {
 
     public LocalDate[] unluckyDatesByYear(int year) {
         LocalDate[] localDates = new LocalDate[12];
+        int count = 0;
+        int month = 1;
+        int day = 13;
+        LocalDate workingDate;
+        String dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+            count++;
+        }
+        month++;
+        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
+        if(dayOfWeek.equals("FRIDAY")){
+            workingDate = LocalDate.of(year, month, day);
+            localDates[count] = workingDate;
+        }
 
         return localDates;
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
         String dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek().name();
-        System.out.println(dayOfWeek);
         if(dayOfWeek.equals("FRIDAY"))
             return true;
         else

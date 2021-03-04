@@ -19,11 +19,8 @@ public class WeekTwoExercisePartTwo {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     public void sendingOneShouldReturnStringOne(){
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
+        // needed to convert integer to string
         FizzBuzz fb = new FizzBuzz();
         String expected = "1";
 
@@ -33,11 +30,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingTwoShouldReturnStringTwo(){
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
+        // Test 1 change made this one work
 
         FizzBuzz fb = new FizzBuzz();
         String expected = "2";
@@ -48,11 +42,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingThreeShouldReturnStringFizz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
+        // added check for number of 3 to give back Fizz
 
         FizzBuzz fb = new FizzBuzz();
         String expected = "Fizz";
@@ -63,11 +54,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfThreeShouldReturnStringFizz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
+        // Added remainder calculation to ensure it works for all numbers divided by 3
 
         FizzBuzz fb = new FizzBuzz();
         String expected = "Fizz";
@@ -78,11 +66,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfFiveOfThreeShouldReturnStringBuzz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
+        // Added remainder of 5 check
 
         FizzBuzz fb = new FizzBuzz();
         String expected = "Buzz";
@@ -93,11 +78,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
     public void sendingAnyMultipleOfThreeAndFiveOfThreeShouldReturnStringFizzBuzz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
-        // TODO: Implement the code to make this test pass
-        // TODO: don't forget to commit after passing the test
+        // added check of both remainders - if both true pass this new value
 
         FizzBuzz fb = new FizzBuzz();
         String expected = "FizzBuzz";

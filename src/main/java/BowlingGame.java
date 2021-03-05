@@ -19,7 +19,11 @@ public class BowlingGame {
         int startOfFrameIndex = 0;
 
         for(int frame = 1; frame < 11 ; frame++){
-            if(rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1] == 10){
+            if (rolls[startOfFrameIndex]==10){
+                score += rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1] + rolls[startOfFrameIndex + 2];
+                startOfFrameIndex += 1;
+            }
+            else if(rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1] == 10){
                 score += rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1] + rolls[startOfFrameIndex + 2];
                 startOfFrameIndex += 2;
             } else{

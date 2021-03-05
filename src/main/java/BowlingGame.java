@@ -14,9 +14,22 @@ public class BowlingGame {
         //            This change should not break the existing tests that pass. This is called refactoring.
 
         // TODO RESPONSE: In java, indexes start with 0
-        for(int currentVal:rolls)
-            score += currentVal;
+
+
+        int startOfFrameIndex = 0;
+
+        for(int frame = 1; frame < 11 ; frame++){
+            if(rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1] == 10){
+                score += rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1] + rolls[startOfFrameIndex + 2];
+                startOfFrameIndex += 2;
+            } else{
+                score += rolls[startOfFrameIndex] + rolls[startOfFrameIndex + 1];
+                startOfFrameIndex += 2;
+            }
+        }
+
         return score;
+
     }
 
 }

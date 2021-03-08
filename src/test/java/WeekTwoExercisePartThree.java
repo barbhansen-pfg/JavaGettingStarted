@@ -112,89 +112,16 @@ public class WeekTwoExercisePartThree {
         int month = 1;
         int day = 13;
         LocalDate workingDate;
-        String dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-            count++;
-        }
-        month++;
-        dayOfWeek = LocalDate.of(year,month, day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY")){
-            workingDate = LocalDate.of(year, month, day);
-            localDates[count] = workingDate;
-        }
 
+        for (int i = 0; i < 12; i++) {
+            String dayOfWeek = LocalDate.of(year, month, day).getDayOfWeek().name();
+            if (dayOfWeek.equals("FRIDAY")) {
+                workingDate = LocalDate.of(year, month, day);
+                localDates[count] = workingDate;
+                count++;
+            }
+            month++;
+        }
         return localDates;
     }
 

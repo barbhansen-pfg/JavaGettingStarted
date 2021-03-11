@@ -108,19 +108,13 @@ public class WeekTwoExercisePartThree {
 
     public LocalDate[] unluckyDatesByYear(int year) {
         LocalDate[] localDates = new LocalDate[12];
-        int count = 0;
-        int month = 1;
-        int day = 13;
+        int positionInArray = 0;
         LocalDate workingDate;
 
-        for (int i = 0; i < 12; i++) {
-            String dayOfWeek = LocalDate.of(year, month, day).getDayOfWeek().name();
-            if (dayOfWeek.equals("FRIDAY")) {
-                workingDate = LocalDate.of(year, month, day);
-                localDates[count] = workingDate;
-                count++;
+        for (int month = 1; month <= 12; month++) {
+            if (isUnluckyDate(year,month,13)) {
+                localDates[positionInArray++] = LocalDate.of(year, month, 13);
             }
-            month++;
         }
         return localDates;
     }

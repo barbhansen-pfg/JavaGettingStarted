@@ -126,10 +126,11 @@ public class WeekTwoExercisePartThree {
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
-        String dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek().name();
-        if(dayOfWeek.equals("FRIDAY"))
+        DayOfWeek dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek();
+        if (dayOfWeek == DayOfWeek.FRIDAY){
             return true;
-        else
+        } else {
             return false;
+        }
     }
 }

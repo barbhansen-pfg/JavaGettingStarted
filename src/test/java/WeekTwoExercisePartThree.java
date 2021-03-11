@@ -108,10 +108,9 @@ public class WeekTwoExercisePartThree {
 
     public LocalDate[] unluckyDatesByYear(int year) {
         LocalDate[] localDates = new LocalDate[12];
-        int positionInArray = 0;
         LocalDate workingDate;
 
-        for (int month = 1; month <= 12; month++) {
+        for (int month = 1, positionInArray = 0; month <= 12; month++) {
             if (isUnluckyDate(year,month,13)) {
                 localDates[positionInArray++] = LocalDate.of(year, month, 13);
             }
@@ -121,7 +120,7 @@ public class WeekTwoExercisePartThree {
 
     public boolean isUnluckyDate(int year, int month, int day) {
         DayOfWeek dayOfWeek = LocalDate.of(year,month,day).getDayOfWeek();
-        if (dayOfWeek == DayOfWeek.FRIDAY){
+        if (dayOfWeek == DayOfWeek.FRIDAY && day == 13){
             return true;
         } else {
             return false;

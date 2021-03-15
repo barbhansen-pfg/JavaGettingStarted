@@ -81,8 +81,8 @@
        * A Closer Look at Members
     * Exercises
       * Create a small set of class structures in the JavaGettingStarted/src folder
-          * Authors and Books
-              * Authors have
+          * Author and Books
+              * Author have
                   * Name
                   * One or more books
               * Books have

@@ -1,3 +1,7 @@
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class WeekThreeExercisesPartOne {
    // class visibility
    // static variables vs. instance variables
@@ -21,5 +25,14 @@ public class WeekThreeExercisesPartOne {
     // pass by value vs reference
 
     // incrementally build out a solution using exercises
+
+    @Test
+    public void myTest(){
+        Author erica = new Author("Erica Taylor");
+
+        assertEquals(7,erica.getNumberOfBooks());
+
+    }
+
 
 }
